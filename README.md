@@ -75,6 +75,19 @@ Here are some sample predictions from the final model, showcasing its accuracy o
 | :--------------: | :----------------: |
 | ![Result 1](./assets/result1.png) | ![Result 2](./assets/result2.png) |
 
+## 🦾 Model Performance
+
+Models were evaluated on the validation set using the **Intersection over Union (IoU)** metric. The results clearly show the benefit of transfer learning and fine-tuning.
+
+| Model Architecture | Validation IoU |
+| :--- | :---: |
+| U-Net (from scratch) | 75.61% |
+| ResNet50-U-Net (Feature Extraction) | 75.64% |
+| **ResNet50-U-Net (Fine-Tuned)** | **78.27%** |
+
+While the initial transfer learning approach offered a marginal improvement, **fine-tuning the ResNet50 encoder provided a significant 2.6% boost in IoU**, demonstrating its ability to adapt learned features to the specific domain of multispectral satellite imagery.
+
+
 ## 💻 Tech Stack
 
 -   **Backend & Deployment**: 🐍 Python, 🌐 Flask
